@@ -1,0 +1,15 @@
+$mobile-size:415px;
+$tablet-size:720px;
+$desktop-size:960px;
+$largedesktop-size:1050px;
+
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(min-width $mobile-size 4);
+$tablet: new-breakpoint(min-width $tablet-size 8);
+$desktop: new-breakpoint(min-width $desktop-size 12);
+$largedesktop: new-breakpoint(min-width $largedesktop-size 16);
+
+// colors
+$primary-red: #de4d3e;
+$primary-blue: #46ddd4;
+$primary-grey: #919191;

@@ -1,0 +1,27 @@
+$num-of-lines: 3;
+$line-height: 1.2em;
+$background: #000;
+.block-with-text {
+  overflow: hidden;
+  position: relative; 
+  line-height: $line-height;
+  max-height: $line-height * $num-of-lines; 
+  text-align: justify;  
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.block-with-text:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.block-with-text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: $background;
+}

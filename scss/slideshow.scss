@@ -1,0 +1,92 @@
+@import "bourbon";
+@import "neat";
+@import "grids";
+@import "variables";
+/* Slideshow container */
+.slideshow-container {
+  display: block;
+  height: auto;
+  width: 100%;
+  @media screen and (max-width: $tablet-size){
+    position: relative;
+    top: 60px;
+  }
+}
+
+.slideshow-container img {
+  // position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+.slides {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+/* Caption text */
+.text-grid {
+  @include grid-container;
+
+}
+.text-column {
+  @include grid-media($tablet-up){
+    @include grid-column(3);
+    @include grid-push(3);
+  }
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+/* The dots */
+.dot-container {
+  position: relative;
+  bottom: 60px;
+  text-align: center;
+  @media screen and (max-width: $tablet-size){
+    bottom: 35px;
+  }
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: $primary-red;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
