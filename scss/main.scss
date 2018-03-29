@@ -234,6 +234,10 @@ ul.nav  {
 	margin: 0;
 	width: 100%;
 	min-height: 60px;
+    font-size: 19px;
+    @media screen and (max-width: $tablet-size) {
+		font-size: 10px;
+	}
 }
 
 .divider {
